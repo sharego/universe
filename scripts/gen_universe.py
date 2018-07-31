@@ -724,7 +724,7 @@ def _populate_dcos_version_json_to_folder(dcos_version, outdir):
     :return: None
     """
     repo_dir = outdir / dcos_version / 'package'
-    print('Creating path : ' + repo_dir)
+    print('Creating path : ' + str(repo_dir))
     pathlib.Path(repo_dir).mkdir(parents=True)
     repo_file = pathlib.Path(outdir / 'repo-up-to-{}.json'.format(dcos_version))
     with repo_file.open('r',  encoding='utf-8') as f:
